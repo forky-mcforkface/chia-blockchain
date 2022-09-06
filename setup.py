@@ -1,7 +1,7 @@
 from setuptools import setup
 
 dependencies = [
-    "aiofiles==0.7.0",  # Async IO for files
+    "aiofiles==22.1.0",  # Async IO for files
     "blspy==1.0.15",  # Signature library
     "chiavdf==1.0.6",  # timelord and vdf verification
     "chiabip158==1.1",  # bip158-style wallet filters
@@ -40,6 +40,8 @@ upnp_dependencies = [
 ]
 
 dev_dependencies = [
+    # TODO: remove after https://github.com/PyCQA/pylint/issues/7425 is resolved
+    "astroid!=2.12.6, !=2.12.7",
     "build",
     "coverage",
     "pre-commit",
